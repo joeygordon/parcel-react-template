@@ -4,16 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "npm run parcel:build",
+    "clean": "npx rimraf ./dist/*",
+    "dev": "npm run parcel:start",
+    "lint-js": "eslint --ext .jsx,.js src",
+    "lint-css": "stylelint -v",
+    "lint": "npm run lint-js ; npm run lint-css",
+    "parcel:build": "parcel build src/index.html",
+    "parcel:start": "npm audit && parcel src/index.html",
+    "prebuild": "npm run clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "staticFiles": {
+    "staticPath": [
+      "public"
+    ]
+  },
   "dependencies": {
-    "react": "^16.8.6"
+    "@emotion/core": "^10.0.14",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/babel-preset-css-prop": "^10.0.14",
+    "babel-plugin-transform-node-env-inline": "^0.4.3",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.1",
     "eslint-config-prettier": "^6.0.0",
@@ -22,6 +41,10 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
     "parcel-bundler": "^1.12.3",
-    "prettier": "^1.18.2"
+    "parcel-plugin-static-files-copy": "^2.1.2",
+    "parcel-plugin-sw-precache": "^1.1.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "stylelint": "^10.1.0"
   }
 }
