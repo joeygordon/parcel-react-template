@@ -11,8 +11,13 @@ This is just my personal boilerplate project for starting new React apps.
 - ESLint
 - Stylelint
 
-## Getting started
+## Getting Started
 
 - cd into the directory and `npm i`
 - `npm run dev` to run development server
 - `npm run build` to build the project
+
+## Other Commands
+
+- Linting: `npm run lint`
+- Tests (Coming Soon): `npm run test`
