@@ -7,14 +7,14 @@ const App = () => {
   const globalStyles = css`
     body {
       background: #ddd;
-      color: #666;
+      color: #333;
     }
   `;
 
   return (
     <React.Fragment>
       <Global styles={globalStyles} />
-      <div />
+      <div>Hey</div>
     </React.Fragment>
   );
 };
