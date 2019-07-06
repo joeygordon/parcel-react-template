@@ -21,3 +21,9 @@ This is just my personal boilerplate project for starting new React apps.
 
 - Linting: `npm run lint`
 - Tests (Coming Soon): `npm run test`
+
+### Todo List
+
+- [x] Get a working app
+- [ ] Add tests
+- [ ] Create Yeoman generator
