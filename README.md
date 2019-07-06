@@ -25,5 +25,5 @@ This is just my personal boilerplate project for starting new React apps.
 ### Todo List
 
 - [x] Get a working app
-- [ ] Add tests
+- [x] Add tests
 - [ ] Create Yeoman generator
