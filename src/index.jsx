@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
+import Example from './components/Example';
+
 const App = () => {
   const globalStyles = css`
     body {
@@ -14,7 +16,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Global styles={globalStyles} />
-      <div>Hey</div>
+      <Example message="Hey" />
     </React.Fragment>
   );
 };
